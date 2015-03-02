@@ -1,0 +1,22 @@
+
+<div id="main-container" class="container-fluid">
+<h1>Vuelos</h1>
+
+<table class="table table-striped" >
+  <tr>
+    	<th>Vuelo</th>
+    	<th>Salida</th>
+      	<th>Llegada</th>
+    	<th colspan="6"></th>
+
+  <% @flights.map do |flight|%>
+	</tr>
+ 
+ <tr>
+      <td><%= flight.number %></td>
+      <td><%= flight.departure.date %></td>
+	  <td><%= flight.arrival.date %></td>
+</tr>
+
+<% end %>
+</table>
